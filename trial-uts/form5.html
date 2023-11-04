@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up Form</title>
+    <!-- Mengimpor CSS Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .left-side {
+        background: blue;
+        padding: 20px;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right-side {
+        background: lightgray;
+        padding: 20px;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form-container {
+        max-width: 300px;
+      }
+      .form-container h2 {
+        text-align: center;
+      }
+      .form-container input[type="text"],
+      .form-container input[type="password"],
+      .form-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-6 left-side">
+          <!-- Gambar orang berdasi dengan latar belakang biru -->
+          <img
+            src="../image/logo-itsnu.png"
+            alt="User with tie"
+            class="img-fluid"
+            style="width: 300px"
+          />
+        </div>
+        <div class="col-md-6 right-side">
+          <div class="form-container">
+            <h2 class="text-center">Sign Up</h2>
+            <form action="#" method="post" onsubmit="return loginSuccess()">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="username"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mengimpor JavaScript Bootstrap (Jika Anda memerlukannya) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function loginSuccess() {
+        // Simulasi notifikasi login sukses
+        alert("Login sukses, tunggu sebentar...");
+
+        // Me-refresh halaman setelah 2 detik (2000 ms)
+        setTimeout(function () {
+          location.reload();
+        }, 2000);
+
+        // Mengembalikan false agar form tidak di-submit
+        return false;
+      }
+    </script>
+  </body>
+</html>

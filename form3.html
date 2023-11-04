@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Membuat Formulir</title>
+    <style>
+      body {
+        background: pink; /* Menambahkan latar belakang warna pink */
+        /* Mengatur judul di tengah */
+      }
+      h1 {
+        text-align: center;
+      }
+      hr {
+        border: 2px solid #000;
+      }
+
+      button {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 10px 20px;
+        border: 3;
+        border-color: darkgray;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      button[type="submit"] {
+        background-color: #ffffff;
+      }
+
+      button[type="reset"] {
+        background-color: #ffffff;
+      }
+
+      .error-message {
+        color: red;
+      }
+      .body {
+        background: pink; /* Menambahkan latar belakang warna pink */
+        text-align: center; /* Mengatur judul di tengah */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulir Balap</h1>
+    <hr />
+    <br />
+    <form onsubmit="return validateForm();">
+      <label for="email"
+        >Email
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp:</label
+      >
+      <input type="text" id="email" required style="width: 300px" />
+      <br />
+      <br />
+      <label for="password"
+        >Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label
+      >
+      <input type="password" id="password" required />
+      <br />
+      <br />
+      <label>Jenis Kelamin &nbsp;&nbsp;:</label>
+      <input type="radio" name="jk" id="pria" required />
+      <label for="pria">Pria</label>
+      <input type="radio" name="jk" id="wanita" required />
+      <label for="wanita">Wanita</label>
+      <br />
+      <br />
+      <label
+        >Hobi
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label
+      >
+      <input type="checkbox" id="menyanyi" />
+      <label for="menyanyi">Menyanyi</label> &nbsp;
+      <input type="checkbox" id="mendaki" />
+      <label for="mendaki">Mendaki</label>
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="futsal" />
+      <label for="futsal">Futsal </label
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="Mabar" />
+      <label for="Mabar">Mabar</label>
+      <br />
+      <br />
+      <label for="deskripsi"
+        >Deskripsi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label
+      >
+      <textarea id="deskripsi" cols="19" rows="5" required></textarea>
+      <br />
+      <br />
+      <label for="file">Unggah File &nbsp;&nbsp;&nbsp; :</label>
+      <input
+        type="file"
+        id="file"
+        name="file"
+        accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
+        required
+      />
+      <br />
+      <br />
+      <label for="alamat"
+        >Alamat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+      </label>
+      <select id="alamat" required>
+        <option value="pekalongan">Pekalongan</option>
+        <option value="pemalang">Pemalang</option>
+        <option value="batang">Batang</option>
+      </select>
+      <br />
+      <br />
+      <button type="submit">Kirim</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        var elements = document.querySelectorAll(
+          "input[required], select[required], textarea[required]"
+        );
+        for (var i = 0; i < elements.length; i++) {
+          if (elements[i].value === "") {
+            alert("Harap isi semua kolom yang diperlukan!");
+            return false;
+          }
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Formulir</title>
+    <style>
+      label {
+        display: block; /* Membuat label menjadi blok, sehingga kolom input berada di bawahnya */
+        margin-bottom: 10px; /* Memberi jarak antara setiap label dan kolom input */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulir Sederhana</h1>
+    <form action="proses_form.php" method="post">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Enter your password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="message">Your message:</label>
+      <textarea id="message" name="message" rows="4" cols="50"></textarea
+      ><br /><br />
+
+      <input
+        type="submit"
+        value="Kirim"
+        style="background-color: green; color: white"
+      />
+    </form>
+  </body>
+</html>
