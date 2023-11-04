@@ -1,1 +1,1 @@
-ctrl+a - del terus ctrl+s dek, ntar codingannya auto running
+ctrl+a -> del terus ctrl+s dek, ntar codingannya auto running
